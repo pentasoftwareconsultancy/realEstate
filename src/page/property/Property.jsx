@@ -1,5 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link for internal routing
+import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import { Navigation, Autoplay } from 'swiper/modules'; 
 import './property.css';
 
 function Property() {
@@ -80,9 +85,29 @@ function Property() {
           A great platform to buy, sell, and rent your properties without any agent or commissions.
         </p>
 
-        <ul className="property-list">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1} 
+          navigation
+          autoplay={{ delay: 3000, disableOnInteraction: false }} 
+          breakpoints={{
+           
+            768: {
+              slidesPerView: 1, 
+            },
+           
+            1024: {
+              slidesPerView: 2, 
+            },
+            
+            1200: {
+              slidesPerView: 3, 
+            },
+          }}
+        >
           {properties.map((property) => (
-            <li key={property.id}>
+            <SwiperSlide key={property.id}>
               <div className="property-card">
                 <figure
                   className="card-banner img-holder"
@@ -148,9 +173,9 @@ function Property() {
                   </div>
                 </div>
               </div>
-            </li>
+            </SwiperSlide>
           ))}
-        </ul>
+        </Swiper>
       </div>
     </section>
   );

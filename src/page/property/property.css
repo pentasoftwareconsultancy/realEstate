@@ -43,21 +43,91 @@
     max-width: 1200px;
   }
   
-  .property-card {
-    position: relative;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #fff;
-    transition: box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 350px;
-  }
-  
-  .property-card:hover {
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
-  }
-  
+  /* Swiper container adjustments */
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  padding: 40px 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Swiper slide styling */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjusts with content */
+}
+
+/* Property card inside Swiper slide */
+.property-card {
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  height: 480px; /* Uniform card height */
+}
+
+.property-card:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease;
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.swiper-pagination {
+  bottom: 15px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007BFF;
+}
+
+
   .property-card .card-banner {
     position: relative;
     overflow: hidden;
