@@ -1,0 +1,268 @@
+
+.about-banner1 {
+  position: relative;
+  width: 100%;
+  height: 400px; 
+  background-image: url("https://jll-global-gdim-res.cloudinary.com/image/upload/v1638707721/2021-12/fs6rc3rifes533nzqrey.jpg");
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 0 10%; 
+  box-sizing: border-box;
+}
+
+.about-banner1-text {
+  text-align: center; 
+}
+
+.about-banner1-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.about-container1 {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  gap: 40px; 
+  max-width: 1200px;
+  height: auto;
+  margin: 60px auto; 
+  padding: 0 10%; 
+  box-sizing: border-box;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left; 
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.about-text p {
+  font-size: 1.5rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px; 
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.container4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 60px auto; 
+  padding: 0 10%; 
+  gap: 40px; 
+  box-sizing: border-box;
+}
+
+.video-container4 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container4 iframe {
+  width: 100%;
+  max-width: 500px; 
+  aspect-ratio: 16 / 9; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-container4 {
+  flex: 1;
+  text-align: left;
+  font-family: Arial, sans-serif;
+}
+
+.text-container4 .title3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.text-container4 .description3 {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+
+@media (max-width: 768px) {
+  .about-banner1 {
+    height: 200px;
+    padding: 0 5%;
+  }
+
+  .about-banner1-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-container1 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 5%;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .container4 {
+    flex-direction: column; 
+    padding: 0 5%;
+    gap: 20px;
+  }
+
+  .text-container4 {
+    text-align: center;
+  }
+
+  .text-container4 .title3 {
+    font-size: 2rem;
+  }
+
+  .text-container4 .description3 {
+    font-size: 1.5rem;
+  }
+
+  .video-container4 iframe {
+    width: 90%;
+  }
+}
+
+
+.about-container3 {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 40px; 
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1200px; 
+}
+
+.about-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.about-content p {
+  font-size: 16px; 
+  line-height: 1.6;
+  color: #333;
+}
+
+.learn-more-btn {
+  background-color: #e00000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px; 
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #b00000;
+}
+
+.about-image3 {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image3 img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; 
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .about-container3 {
+    flex-direction: column; 
+    padding: 20px; 
+  }
+
+  .about-content {
+    padding: 10px;
+    text-align: center; 
+  }
+
+  .about-content h2 {
+    font-size: 22px; 
+    margin-bottom: 15px;
+  }
+
+  .about-content p {
+    font-size: 14px; 
+  }
+
+  .learn-more-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .about-image3 {
+    padding: 10px; 
+  }
+
+  .about-image3 img {
+    max-width: 300px; 
+    width: 100%; 
+  }
+}

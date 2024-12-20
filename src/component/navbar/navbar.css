@@ -1,0 +1,150 @@
+/* Header Section */
+header {
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 15px;
+  z-index: 4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex Container for Header Content */
+.header .container {
+  display: flex;
+  justify-content: space-between; /* Space out logo and menu */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex; /* Default horizontal layout for desktop */
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar.active {
+  display: flex; /* Keep menu active for mobile toggle */
+  flex-direction: column; /* Stack links vertically */
+  position: absolute;
+  top: 100%; /* Position below the header */
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  text-align: center;
+  z-index: 3;
+}
+
+/* Navbar Links */
+.navbar-list {
+  display: flex; /* Default horizontal layout for links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar-link {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #007BFF;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Signup Button */
+.btn {
+  font-size: 2rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+/* Nav Toggle Button (visible only in mobile view) */
+.nav-toggle-btn {
+  display: none; /* Hidden in desktop view */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 4;
+}
+
+.menu-icon {
+  display: block;
+}
+/* 
+.close-icon {
+  display: block;
+} */
+
+.nav-toggle-btn.active .menu-icon {
+  display: none;
+}
+
+/* .nav-toggle-btn.active .close-icon {
+  display: block;
+} */
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: row; /* Stack logo and menu toggle */
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .navbar {
+    display: none; /* Hide menu by default */
+  }
+
+  .navbar.active {
+    display: flex; /* Show when toggle button is active */
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .navbar-list {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px;
+  }
+
+  .navbar-link {
+    font-size: 1.8rem; /* Adjust font size for better readability */
+    padding: 10px 0;
+  }
+
+  .nav-toggle-btn {
+    display: flex; /* Show toggle button in mobile */
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    
+  }
+}
